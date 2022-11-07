@@ -1,0 +1,22 @@
+package codeassignment.cs;
+
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class cs {
+
+	public static void main(String[] args) {
+		
+		WebDriverManager.chromedriver().setup();
+		WebDriver driver=new ChromeDriver();
+		JavascriptExecutor js = (JavascriptExecutor)driver;
+		
+	driver.get("https://www.imdb.com/title/tt9389998/");
+	
+	driver.findElement(AppiumBy.androidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView((\"\"))"));
+	}
+
+}
